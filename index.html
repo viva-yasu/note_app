@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>backbonejs</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" type="text/javascript" ></script>
+  <script type="text/javascript" src="js/lib/underscore.js"></script>
+  <script type="text/javascript" src="js/lib/backbone.js"></script>
+  <script type="text/javascript" src="js/lib/backbone.localStorage.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/model.js"></script>
+  <script type="text/javascript" src="js/container.js"></script>
+  <script type="text/javascript" src="js/note_list_item.js"></script>
+  <script type="text/javascript" src="js/note_list.js"></script>
+</head>
+<body>
+<div id="header">
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="navbar-brand">
+          <a href="./index.html">
+            Note Application Example
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main" class="container">
+  <div id="header-container"></div>
+  <div id="main-container"></div>
+</div>
+
+<script type="text/template" id="noteListView-template">
+  <thead>
+    <th class="col-md-2" colspan="2">Title</th>
+  </thead>
+  <tbody class="js-noteListItemView-container"></tbody>
+</script>
+
+<script type="text/template" id="noteListItemView-template">
+<td>
+  <a href="#">
+    <%= title %>
+  </a>
+</td>
+<td>
+  <div class="text-right">
+    <a href="#" class="btn btn-default btn-sm js-edit">
+      <span class="glyphicon glyphicon-edit">
+        Edit
+      </span>
+    </a>
+    <a href="#" class="btn btn-danger btn-sm js-edit">
+      <span class="glyphicon glyphicon-remove">
+        Delete
+      </span>
+    </a>
+  </div>
+</td>
+</script>
+</body>
+</html>
